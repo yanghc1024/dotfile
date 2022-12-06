@@ -7,17 +7,14 @@ Plug 'morhetz/gruvbox'
 Plug 'jiangmiao/auto-pairs'
 Plug 'octol/vim-cpp-enhanced-highlight'
 
-Plug 'ludovicchabant/vim-gutentags'
-
-" Plug 'rafi/awesome-vim-colorschemes'
-" Plug 'vim-airline/vim-airline'
-
-" Plug 'skywind3000/gutentags_plus'
-" Plug 'skywind3000/asyncrun.vim'
-
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-" Plug 'junegunn/vim-easy-align'
-" Plug 'mhinz/vim-signify'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'voldikss/vim-floaterm'
+
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'lervag/vimtex'
+
 
 call plug#end()
 
@@ -98,3 +95,17 @@ let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 
 let g:gutentags_auto_add_gtags_cscope = 0
 let g:gutentags_define_advanced_commands = 1
+
+" ======================================================
+" 	Vimtex
+" ======================================================
+let g:tex_flavor = 'latex'
+let g:vimtex_view_method = 'zathura'
+
+
+" ======================================================
+" 	Floaterm
+" ======================================================
+nnoremap <leader>ft :FloatermNew<cr>
+nnoremap <leader>fn :FloatermNext<cr>
+nnoremap <leader>fp :FloatermPrev<cr>
